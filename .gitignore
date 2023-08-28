@@ -3,6 +3,8 @@ venv/
 env/
 assets/
 
+db.sqlite3
+
 # Byte-Compiled/ Optimized / DLL files
 __pycache__/
 *.py[cod]
