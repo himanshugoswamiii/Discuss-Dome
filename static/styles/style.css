@@ -16,6 +16,9 @@
   --color-bg: #1b1b2d;
   --color-success: #5dd693;
   --color-error: #fc4b0b;
+  --color-para-heading: #76c3f0;
+  --color-not-allowed: #e19e62;
+
 }
 
 /*========== base styles ==========*/
@@ -334,15 +337,16 @@ a {
 }
 
 @media screen and (max-width: 700px) {
-  .header__logo h1 {
-    /* display: none; */
-      font-size: 80%;
-  }
 }
 
 @media screen and (max-width: 500px) {
   .header__search {
     display: none;
+  }
+
+  .header__logo h1 {
+    /* display: none; */
+      font-size: 95%;
   }
 }
 
@@ -643,7 +647,7 @@ a {
 
 .roomList__header p {
   font-weight: 500;
-  color: var(--color-dark-light);
+  color: var(--color-para-heading);
 }
 
 /*========== Room List Room ==========*/
@@ -1115,6 +1119,15 @@ a {
   background: transparent;
 }
 
+.room__message > .not_logged_in {
+    padding: 1.2rem;
+    font-weight: 600;
+    background-color: var(--color-dark-light);
+    color: var(--color-not-allowed);
+    margin-top: -1rem;
+    text-align: center;
+}
+
 .room__message > form > input {
   resize: none;
   background-color: var(--color-dark-light);
@@ -1170,4 +1183,9 @@ a {
   font-weight: 500;
   color: var(--color-main);
   font-weight: 1.4rem;
+}
+
+/*   LATEST */
+.extraColor {
+    color: #4ff9f9;
 }
