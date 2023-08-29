@@ -361,7 +361,7 @@ a {
   align-items: center;
   font-weight: 500;
   text-decoration: none;
-  color: var(--color-gray);
+  color: #fff;
 }
 
 .header__menu img {
@@ -382,7 +382,7 @@ a {
 .header__menu svg {
   width: 1.6rem;
   height: 1.6rem;
-  fill: var(--color-dark-light);
+  /* fill: var(--color-dark-light); */
 }
 
 .dropdown-button {
