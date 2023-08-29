@@ -15,8 +15,8 @@
               </path>
             </svg>
           </a>
-          <h3>Study Room</h3>
         </div>
+        <h3>{{room.name}}</h3>
         {% if room.host == request.user %}
         <div class="room__topRight">
           <a href="{% url 'update-room' room.id %}">
@@ -113,11 +113,18 @@
 
       </div>
       <div class="room__message">
-        <form action="" method="POST">
-          {% csrf_token %}
-          <input name="body" placeholder="Write your message here..." />
-        </form>
+        {% if request.user.is_authenticated %}
+            <form action="" method="POST">
+              {% csrf_token %}
+              <input name="body" placeholder="Write your message here..." />
+            </form>
+        {% else %}
+            <div class = "not_logged_in">
+                You must log in to send a msg
+            </div>
+        {% endif %}
       </div>
+
     </div>
     <!-- Room End -->
 
